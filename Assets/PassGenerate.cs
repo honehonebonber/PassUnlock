@@ -10,10 +10,15 @@ public class PassGenerate : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		pass = basicPass.OrderBy(i => Guid.NewGuid()).ToArray();
+		foreach (var a in pass){
+			Debug.Log (a);
+		}
+
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		
 	}
+
 }
