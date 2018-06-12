@@ -7,6 +7,7 @@ public class ButtonScript : MonoBehaviour {
 	private int buttonID;
 	public GameObject instance;
 	private bool touch = false;
+    public GameObject timerText;
 	// Use this for initialization
 	void Start () {
 		buttonID = int.Parse (this.transform.tag);
@@ -41,11 +42,12 @@ public class ButtonScript : MonoBehaviour {
 		if (PassManager.nowDrag == true && touch == false) {
 			if (buttonID == PassGenerate.pass [PassManager.nowPass]) {
 				ChangeGreen ();
-				PassManager.nowPass++;
 				touch = true;
-				if (PassManager.nowPass == 9) {
+				if (PassManager.nowPass == 8) {
 					Debug.Log ("Clear!");
+                    timerText.GetComponent<TimeManager>().Clear();
 				}
+                PassManager.nowPass++;
 			} else {
 				ChangeRed ();
 				StartCoroutine ("Miss");
@@ -62,8 +64,8 @@ public class ButtonScript : MonoBehaviour {
 		this.GetComponent<Image> ().color = new Color(0f/255.0f, 255.0f/255.0f, 0f/255.0f, 255.0f/255.0f);	
 	}
 	IEnumerator Miss(){
-		PassManager.nowPass = 1;
-		yield return new WaitForSeconds(0.5f);
+		PassManager.nowPass = 0;
+		yield return new WaitForSeconds(0.1f);
 		ChangeWhite ();
 		PassManager.nowDrag = false;
 		touch = false;
