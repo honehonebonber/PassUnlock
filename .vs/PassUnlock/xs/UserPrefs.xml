@@ -1,8 +1,8 @@
 ﻿<Properties StartupConfiguration="{3B525B81-55BB-D19F-9381-6949044AB56D}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/ClearScene.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/PassGenerate.cs">
     <Files>
-      <File FileName="Assets/ButtonScript.cs" Line="43" Column="62" />
-      <File FileName="Assets/PassGenerate.cs" Line="7" Column="26" />
+      <File FileName="Assets/ButtonScript.cs" Line="36" Column="24" />
+      <File FileName="Assets/PassGenerate.cs" Line="29" Column="24" />
       <File FileName="Assets/PassManager.cs" Line="19" Column="1" />
       <File FileName="Assets/ClearScene.cs" Line="12" Column="58" />
       <File FileName="Assets/TitleScene.cs" Line="18" Column="6" />
